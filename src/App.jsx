@@ -13,8 +13,7 @@ function App() {
     const doc = new Y.Doc();
     const provider = new WebrtcProvider("test-room", doc);
     const type = doc.getText("monaco");
-    const binding = new MonacoBinding(type, editorRef.current.getModel(), new Set([editorRef.current]), provider.awareness);
-    console.log(provider.awareness);                
+    new MonacoBinding(type, editorRef.current.getModel(), new Set([editorRef.current]), provider.awareness);
   }
 
   return (
